@@ -112,6 +112,18 @@ include_once ("./header.php");
     .ad-banner-frame {
         margin-top: 35px;
     }
+
+    .recent_post_row {
+        height: 345px !important;
+    }
+
+    .recent_post_clm {
+        height: 100%;
+    }
+
+    .recent_post_clm .card {
+        height: 100%;
+    }
 </style>
 
 <body>
@@ -189,8 +201,26 @@ include_once ("./header.php");
 
             <!-- Recent frame  -->
             <div class="col-md-10">
-                <div class="row">
-                    <div class="col-md-3">
+
+                <div class="row recent_post_row">
+
+                    <div class="col-md-12">
+                        <h4 class="text-start">
+                            Recent
+                        </h4>
+                    </div>
+                    <div class="col-md-3 recent_post_clm">
+                        <div class="card ">
+                            <img src="./image/card-img.png" class="card-img-top" alt="Card image">
+                            <div class="category-label">Sports</div>
+                            <div class="card-body">
+                                <h5 class="card-title">How to Drive a Car Safely</h5>
+                                <p class="card-text">Ah, The Joy Of The Open Road—It’s A Good Feeling. But If You’re New
+                                    To Driving, Follow These Tips For A Safe Journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 recent_post_clm">
                         <div class="card">
                             <img src="./image/card-img.png" class="card-img-top" alt="Card image">
                             <div class="category-label">Sports</div>
@@ -201,20 +231,9 @@ include_once ("./header.php");
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6 recent_post_clm">
                         <div class="card">
-                            <img src="./image/card-img.png" class="card-img-top" alt="Card image">
-                            <div class="category-label">Sports</div>
-                            <div class="card-body">
-                                <h5 class="card-title">How to Drive a Car Safely</h5>
-                                <p class="card-text">Ah, The Joy Of The Open Road—It’s A Good Feeling. But If You’re New
-                                    To Driving, Follow These Tips For A Safe Journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img src="./image/card-img.png" class="card-img-top" alt="Card image">
+                            <img src="./image/card-img.png" class="card-img-top img-fluid" alt="Card image">
                             <div class="category-label">Sports</div>
                             <div class="card-body">
                                 <h5 class="card-title">How to Drive a Car Safely</h5>
