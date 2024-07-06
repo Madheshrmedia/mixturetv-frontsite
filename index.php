@@ -63,14 +63,20 @@ include_once ("./header.php");
 
     .card-body {
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: 10px;
+        left: 10px;
         width: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        /* Semi-transparent background */
-        color: white;
-        padding: 10px;
+        background: rgba(255, 245, 234, 0.9);
+        color: black;
+        padding: 15px;
         box-sizing: border-box;
+        border-radius: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .card-body>* {
+        margin-top: -10px;
+        /* Adjust this value to fine-tune the gap */
     }
 
     .category-label {
@@ -86,13 +92,21 @@ include_once ("./header.php");
 
     .card-title {
         margin: 0;
-        font-size: 24px;
+        font-size: 16px;
         font-weight: bold;
+        font-weight: 500;
     }
 
     .card-text {
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 13px;
+        font-weight: 300;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        /* Number of lines before truncation */
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .ad-banner-frame {

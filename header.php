@@ -21,7 +21,6 @@
 
         .navbar-background {
             background-color: #FF0808;
-            /* Fallback color */
             background-image: linear-gradient(to bottom, #FF0808, #990505);
         }
 
