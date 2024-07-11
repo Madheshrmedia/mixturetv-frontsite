@@ -6,6 +6,15 @@ include_once ("./header.php");
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
 <style>
+    body {
+        margin: 0px !important;
+        overflow-x: hidden;
+    }
+
+    /* .container-fluid {
+        --bs-gutter-x: 0px !important;
+    } */
+
     .slide-menu {
         display: inline-block;
         /* Ensure the div fits the content */
@@ -41,88 +50,6 @@ include_once ("./header.php");
     .owl-item {
         width: 150px !important;
         /* Set the width of the carousel items */
-    }
-
-
-
-    /* recent frame  */
-    .card {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        /* Ensure the card takes the full width of the container */
-        border-radius: 10px;
-        /* Rounded corners */
-    }
-
-    .card-img-top {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .card-body {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        width: 100%;
-        background: rgba(255, 245, 234, 0.9);
-        color: black;
-        padding: 15px;
-        box-sizing: border-box;
-        border-radius: 10px;
-        width: calc(100% - 20px);
-    }
-
-    .card-body>* {
-        margin-top: -10px;
-        /* Adjust this value to fine-tune the gap */
-    }
-
-    .category-label {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: white;
-        color: red;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 14px;
-    }
-
-    .card-title {
-        margin: 0;
-        font-size: 16px;
-        font-weight: bold;
-        font-weight: 500;
-    }
-
-    .card-text {
-        margin-top: 10px;
-        font-size: 13px;
-        font-weight: 300;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        /* Number of lines before truncation */
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .ad-banner-frame {
-        margin-top: 35px;
-    }
-
-    .recent_post_row {
-        height: 345px !important;
-    }
-
-    .recent_post_clm {
-        height: 100%;
-    }
-
-    .recent_post_clm .card {
-        height: 100%;
     }
 </style>
 
@@ -192,64 +119,42 @@ include_once ("./header.php");
     <!-- frames -->
 
     <div class="container-fluid ad-banner-frame">
-        <div class="row">
 
-            <!-- AD banners -->
-            <div class="col-md-1">
-                <img src="./image/adbanners.png" class="image-fluid ad-banner-img img-fluid" alt="ad-banner">
-            </div>
 
-            <!-- Recent frame  -->
-            <div class="col-md-10">
+        <!-- recent news frame  -->
+        <?php
+        include_once ("recentframe.php");
+        ?>
+        <!-- Trending now post frame  -->
+        <?php
+        include_once ("trendingframe.php");
+        ?>
 
-                <div class="row recent_post_row">
+        <!-- Sport API frame -->
+        <?php
+        include_once ("sportapiframe.php");
+        ?>
 
-                    <div class="col-md-12">
-                        <h4 class="text-start">
-                            Recent
-                        </h4>
-                    </div>
-                    <div class="col-md-3 recent_post_clm">
-                        <div class="card ">
-                            <img src="./image/card-img.png" class="card-img-top" alt="Card image">
-                            <div class="category-label">Sports</div>
-                            <div class="card-body">
-                                <h5 class="card-title">How to Drive a Car Safely</h5>
-                                <p class="card-text">Ah, The Joy Of The Open Road—It’s A Good Feeling. But If You’re New
-                                    To Driving, Follow These Tips For A Safe Journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 recent_post_clm">
-                        <div class="card">
-                            <img src="./image/card-img.png" class="card-img-top" alt="Card image">
-                            <div class="category-label">Sports</div>
-                            <div class="card-body">
-                                <h5 class="card-title">How to Drive a Car Safely</h5>
-                                <p class="card-text">Ah, The Joy Of The Open Road—It’s A Good Feeling. But If You’re New
-                                    To Driving, Follow These Tips For A Safe Journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 recent_post_clm">
-                        <div class="card">
-                            <img src="./image/card-img.png" class="card-img-top img-fluid" alt="Card image">
-                            <div class="category-label">Sports</div>
-                            <div class="card-body">
-                                <h5 class="card-title">How to Drive a Car Safely</h5>
-                                <p class="card-text">Ah, The Joy Of The Open Road—It’s A Good Feeling. But If You’re New
-                                    To Driving, Follow These Tips For A Safe Journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Popular post frame -->
+        <?php
+        include_once ("popularframe.php");
+        ?>
 
-            <!-- AD banners -->
-            <div class="col-md-1">
-                <img src="./image/adbanners.png" class="image-fluid ad-banner-img img-fluid" alt="ad-banner">
-            </div>
-        </div>
+        <!-- Weather api -->
+        <?php
+        include_once ("weatherapi.php");
+        ?>
+
+        <!-- Top post -->
+        <?php
+        include_once ("toppostframe.php");
+        ?>
+
+        <!-- Footer -->
+        <?php
+        include_once ("footer.php");
+        ?>
+
     </div>
 
     <?php
