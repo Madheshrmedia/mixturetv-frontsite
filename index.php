@@ -120,7 +120,9 @@ include_once ("./header.php");
 
     <div class="container-fluid ad-banner-frame">
 
-
+        <?php
+        include_once ("./footerlink.php");
+        ?>
         <!-- recent news frame  -->
         <?php
         include_once ("recentframe.php");
@@ -130,9 +132,9 @@ include_once ("./header.php");
         include_once ("trendingframe.php");
         ?>
 
-        <!-- Sport API frame -->
+        <!-- Weather api -->
         <?php
-        include_once ("sportapiframe.php");
+        include_once ("weatherapi.php");
         ?>
 
         <!-- Popular post frame -->
@@ -140,9 +142,9 @@ include_once ("./header.php");
         include_once ("popularframe.php");
         ?>
 
-        <!-- Weather api -->
+        <!-- Sport API frame -->
         <?php
-        include_once ("weatherapi.php");
+        include_once ("sportapiframe.php");
         ?>
 
         <!-- Top post -->
@@ -157,9 +159,7 @@ include_once ("./header.php");
 
     </div>
 
-    <?php
-    include_once ("./footerlink.php");
-    ?>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $('.owl-carousel').owlCarousel({

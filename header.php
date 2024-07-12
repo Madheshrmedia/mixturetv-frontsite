@@ -19,6 +19,11 @@
             font-family: "Inter", sans-serif;
         }
 
+        body {
+            margin: 0px !important;
+            overflow-x: hidden;
+        }
+
         .navbar-background {
             background-color: #FF0808;
             background-image: linear-gradient(to bottom, #FF0808, #990505);
